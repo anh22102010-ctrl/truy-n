@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truyện Ngắn - Kỳ Thi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #ff4757, #ffa502, #2ed573);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2f3542;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+            font-weight: 400;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #57606f;
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .story {
+            font-size: 1.25em;
+            color: #2d3436;
+            text-align: justify;
+        }
+
+        .story p {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .story p::before {
+            content: '"';
+            font-size: 2em;
+            color: #e17055;
+            position: absolute;
+            left: -20px;
+            top: -10px;
+            font-family: serif;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #fdcb6e 0%, #e17055 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        .conclusion {
+            font-size: 1.4em;
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
+            border-left: 5px solid #e17055;
+            border-radius: 15px;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 25px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .story {
+                font-size: 1.15em;
+            }
+            
+            .story p::before {
+                left: -10px;
+                font-size: 1.5em;
+            }
+        }
+
+        /* Hiệu ứng typewriter cho tiêu đề */
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        h1 {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid #e17055;
+            animation: typewriter 3s steps(40) forwards, blink 0.75s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Hiệu ứng fade in cho từng đoạn */
+        .story p {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .story p:nth-child(1) { animation-delay: 0.2s; }
+        .story p:nth-child(2) { animation-delay: 0.4s; }
+        .story p:nth-child(3) { animation-delay: 0.6s; }
+        .story p:nth-child(4) { animation-delay: 0.8s; }
+        .story p:nth-child(5) { animation-delay: 1s; }
+        .story p:nth-child(6) { animation-delay: 1.2s; }
+        .story p:nth-child(7) { animation-delay: 1.4s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Kỳ Thi</h1>
+        <div class="subtitle">Năm học 2025–2026</div>
+        
+        <div class="story">
+            <p>Năm học 2025–2026, kỳ thi vào lớp 10 tại THPT Nghĩa Lộ diễn ra trong không khí căng thẳng quen thuộc, nhưng năm nay dường như nặng nề hơn. Không phải vì đề khó bất thường, mà vì <span class="highlight">áp lực đè lên từng học sinh</span>—âm thầm, bền bỉ và khó gọi tên.</p>
+            
+            <p>Minh là một trong số đó. Suốt những tháng ôn thi, cậu gần như sống trong lịch học dày đặc: sáng ở trường, chiều học thêm, tối tự học. Những con số, công thức, đoạn văn… lặp đi lặp lại đến mức đôi khi cậu không còn cảm nhận được mình đang học vì điều gì.</p>
+            
+            <p><span class="highlight">Ngày thi đến.</span></p>
+            
+            <p>Phòng thi yên tĩnh, chỉ có tiếng lật giấy và kim đồng hồ di chuyển. Minh đọc đề Toán. Không quá bất ngờ, nhưng đủ để phân loại. Cậu làm từng câu một cách cẩn trọng. Đến câu cuối, cậu dừng lại khá lâu.</p>
+            
+            <p>Không phải vì không biết làm, mà vì cậu nhận ra một điều: suốt thời gian qua, cậu luôn nghĩ kỳ thi này sẽ quyết định tất cả.</p>
+            
+            <p><span class="highlight">Nhưng thực ra, nó chỉ là một bước.</span></p>
+            
+            <p>Minh viết tiếp, chậm rãi và chắc chắn hơn. Không còn vội vã, không còn hoảng sợ.</p>
+            
+            <p>Ba ngày thi trôi qua.</p>
+            
+            <p>Khi bước ra khỏi cổng trường sau môn cuối, Minh cảm thấy nhẹ nhõm—không phải vì tự tin sẽ đỗ, mà vì cậu đã làm hết sức mình.</p>
+            
+            <p>Ngày công bố điểm, Minh đỗ vào trường cậu mong muốn. Không phải xuất sắc nhất, nhưng đủ.</p>
+            
+            <p>Cậu nhìn lại quãng thời gian đã qua và nhận ra: điều đáng sợ nhất của kỳ thi không nằm ở đề bài, mà ở cách con người tự tạo áp lực cho chính mình.</p>
+        </div>
+        
+        <div class="conclusion">
+            “Kinh dị” nhất không phải là trượt một kỳ thi,<br>
+            mà là đánh mất sự bình tĩnh và niềm tin vào bản thân<br>
+            giữa những áp lực tưởng chừng không thể vượt qua.
+        </div>
+    </div>
+</body>
+</html>
